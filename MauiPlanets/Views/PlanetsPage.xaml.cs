@@ -1,4 +1,5 @@
 using MauiPlanets.Models;
+using MauiPlanets.Services;
 using Microsoft.Maui.Controls;
 
 namespace MauiPlanets.Views;
@@ -10,7 +11,14 @@ public partial class PlanetsPage : ContentPage
 		InitializeComponent();
 	}
 
-	async void ApiPic_Clicked(System.Object sender, System.EventArgs e)
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+		lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
+		lstAllPlanets.ItemsSource = PlanetsService.GetAllPlanets();
+    }
+    async void ApiPic_Clicked(System.Object sender, System.EventArgs e)
 	{
 
 	}
