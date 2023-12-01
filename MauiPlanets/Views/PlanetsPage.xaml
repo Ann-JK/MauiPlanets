@@ -60,11 +60,10 @@
                     Style="{StaticResource PageHeaderSubtitleStyle}"
                     Text="The solar sysem" />
 
-        </VerticalStackLayout>
 
-        <!--Api pilt-->
+            <!--Api pilt-->
 
-        <Border
+            <Border
                 WidthRequest="56"
                 HeightRequest="56"
                 VerticalOptions="Center"
@@ -74,128 +73,189 @@
                 Grid.Row="0"
                 Grid.Column="1">
 
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="28" />
-            </Border.StrokeShape>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="28" />
+                </Border.StrokeShape>
 
-            <Border.GestureRecognizers>
-                <TapGestureRecognizer Tapped="ApiPic_Clicked" />
-            </Border.GestureRecognizers>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ApiPic_Clicked" />
+                </Border.GestureRecognizers>
 
-            <Image
+                <Image
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     WidthRequest="50"
                     HeightRequest="50"
                     Source="apipic.png">
 
-                <Image.Clip>
-                    <EllipseGeometry
+                    <Image.Clip>
+                        <EllipseGeometry
                             Center="25,25"
                             RadiusX="25"
                             RadiusY="25" />
-                </Image.Clip>
-            </Image>
-        </Border>
-        
-        <!--Search Box-->
-        <Border 
+                    </Image.Clip>
+                </Image>
+            </Border>
+
+            <!--Search Box-->
+            <Border 
             HorizontalOptions="Fill"
             Margin="0,0,24,0"
             HeightRequest="48">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="6" />
-            </Border.StrokeShape>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="6" />
+                </Border.StrokeShape>
 
-            <Grid 
+                <Grid 
                 HorizontalOptions="Fill"
                 VerticalOptions="Center"
                 ColumnDefinitions="Auto, *"
                 ColumnSpacing="16">
-                
-                <Image
+
+                    <Image
                     WidthRequest="18"
                     HeightRequest="18"
                     Source="imgsearch.png"
                     Grid.Column="0"
                     VerticalOptions="Center" />
 
-                <Label
+                    <Label
                     Text="Search your favorite planet"
                     Grid.Column="1"
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center"
                     Style="{StaticResource MenuLabelStyle}" />
-                
-            </Grid>
-        </Border>
 
-        <Label
+                </Grid>
+            </Border>
+
+            <Label
             Style="{StaticResource PageSubHeaderStyle}"
             Margin="0,12,0,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span Text="Most popular..."/>
-                    <Span Text="→" FontSize="20" />
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Most popular..."/>
+                        <Span Text="→" FontSize="20" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-        <CollectionView
+            <CollectionView
             x:Name="lstPopularPlanets"
             HeightRequest="280"
             SelectionMode="Single"
             SelectionChanged="Planets_SelectionChanged">
-            
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
                     Orientation="Horizontal"
                     ItemSpacing="16" />
-            </CollectionView.ItemsLayout>
+                </CollectionView.ItemsLayout>
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate
+                <CollectionView.ItemTemplate>
+                    <DataTemplate
                     x:DataType="models:Planet">
-                    <Border
+                        <Border
                         VerticalOptions="Fill"
                         WidthRequest="220"
                         StrokeThickness="0"
                         Background="{Binding Background}"
                         Padding="20">
 
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="24" />
-                        </Border.StrokeShape>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="24" />
+                            </Border.StrokeShape>
 
-                        <Grid
+                            <Grid
                             RowDefinitions="*, Auto, Auto"
                             RowSpacing="4">
 
-                            <Image
+                                <Image
                                 Grid.Row="0"
                                 Source="{Binding HeroImage}"
                                 Rotation="-30"
                                 Aspect="AspectFit"
                                 VerticalOptions="Fill" />
 
-                            <Label 
+                                <Label 
                                 Grid.Row="1"
                                 Style="{StaticResource FeaturedPlanetHeaderStyle}"
                                 Text="{Binding Name}"
                                 Margin="0,8,0,0"/>
 
-                            <Label 
+                                <Label 
                                 Grid.Row="2"
                                 Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
                                 Text="{Binding Subtitle}"/>
-                        </Grid>
-                    </Border>
+                            </Grid>
+                        </Border>
 
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-            
-        </CollectionView>
-        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Label
+            Style="{StaticResource PageSubHeaderStyle}"
+            Margin="0,12,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="You may also like..."/>
+                        <Span Text="→" FontSize="20"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <CollectionView
+            x:Name="lstAllPlanets"
+            HeightRequest="160"
+            SelectionMode="Single"
+            SelectionChanged="Planets_SelectionChanged">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="16"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate
+                    x:DataType="models:Planet">
+                        <Border
+                        VerticalOptions="Fill"
+                        WidthRequest="140"
+                        StrokeThickness="0"
+                        Background="{Binding Background}"
+                        Padding="16">
+
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16" />
+                            </Border.StrokeShape>
+
+                            <Grid
+                            RowDefinitions="*, Auto, Auto"
+                            RowSpacing="4">
+
+                                <Image
+                                    Grid.Row="0"
+                                    Source="{Binding HeroImage}"
+                                    Rotation="-30"
+                                    Aspect="AspectFit"
+                                    VerticalOptions="Fill"
+                                    HorizontalOptions="Fill"/>
+
+                                <Label 
+                                    Grid.Row="1"
+                                    Style="{StaticResource AllPlanetHeaderSubtitleStyle}"
+                                    Text="{Binding Name}"
+                                    Margin="0,4,0,0"/>
+                            </Grid>
+                        </Border>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
     </Grid>
 
 </ContentPage>
