@@ -196,12 +196,18 @@ namespace MauiPlanets.Services
                 Name = "Pluto",
                 Subtitle = " The In-Between (Dwarf) Planet",
                 HeroImage = "pluto.png",
-                Description = "",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Description = "Pluto (minor-planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of bodies " +
+                "beyond the orbit of Neptune. It is the ninth-largest and tenth-most-massive known object to directly orbit the Sun. It" +
+                " is the largest known trans-Neptunian object by volume, by a small margin, but is slightly less massive than Eris. Like " +
+                "other Kuiper belt objects, Pluto is made primarily of ice and rock and is much smaller than the inner planets. Pluto has" +
+                " only one sixth the mass of Earth's moon, and one third its volume. Pluto was recognized as a planet until 2006. ",
+                AccentColorStart = Color.FromArgb("#9b6547"),
+                AccentColorEnd = Color.FromArgb("#efb493"),
                 Images = new()
                 {
-                    
+                    "https://science.nasa.gov/_ipx/animated_true&w_2048&f_webp/https://images-assets.nasa.gov/image/PIA19702/PIA19702~large.jpg%3Fw=1920%26h=1920%26fit=clip%26crop=faces%252Cfocalpoint",
+                    "https://science.nasa.gov/_ipx/animated_true&w_2048&f_webp/https://images-assets.nasa.gov/image/PIA20544/PIA20544~orig.jpg%3Fw=855%26h=582%26fit=clip%26crop=faces%252Cfocalpoint",
+                    "https://science.nasa.gov/_ipx/animated_true&w_2048&f_webp/https://images-assets.nasa.gov/image/PIA11707/PIA11707~large.jpg%3Fw=1920%26h=960%26fit=clip%26crop=faces%252Cfocalpoint"
                 }
 
             },
@@ -212,17 +218,20 @@ namespace MauiPlanets.Services
                 Subtitle = " The Goddess of Chaos",
                 HeroImage = "eris.png",
                 Description = "Eris (minor-planet designation 136199 Eris) is the most massive and second-largest known " +
-                "dwarf planet in the Solar System.[22] It is a trans-Neptunian object (TNO) in the scattered disk and " +
+                "dwarf planet in the Solar System. It is a trans-Neptunian object (TNO) in the scattered disk and " +
                 "has a high-eccentricity orbit. Eris was discovered in January 2005 by a Palomar Observatory–based team " +
                 "led by Mike Brown and verified later that year. In September 2006, it was named after the Greco–Roman " +
                 "goddess of strife and discord. Eris is the ninth-most massive known object orbiting the Sun and the " +
                 "sixteenth-most massive overall in the Solar System (counting moons). It is also the largest known object " +
-                "in the solar system that has not been visited by a spacecraft. Eris has been measured at 2,326 ± 12 kilometers (1,445 ± 7 mi) in diameter;[12] its mass is 0.28% that of the Earth and 27% greater than that of Pluto,[23][24] although Pluto is slightly larger by volume. Both Eris and Pluto have a surface area that is comparable to the area of Russia or South America. ",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                "in the solar system that has not been visited by a spacecraft. Eris has been measured at 2,326 ± 12 kilometers (1,445 ± 7 mi)" +
+                " in diameter;[12] its mass is 0.28% that of the Earth and 27% greater than that of Pluto, although Pluto is slightly larger by " +
+                "volume. Both Eris and Pluto have a surface area that is comparable to the area of Russia or South America. ",
+                AccentColorStart = Color.FromArgb("#4e8187"),
+                AccentColorEnd = Color.FromArgb("#91cad1"),
                 Images = new()
                 {
-
+                    "https://science.nasa.gov/_ipx/animated_true&w_2048&f_webp/https://images-assets.nasa.gov/image/PIA03034/PIA03034~orig.jpg%3Fw=603%26h=200%26fit=clip%26crop=faces%252Cfocalpoint",
+                    "https://i.cbc.ca/1.1936894.1381378170!/httpImage/hi-852-eris-eso1142a.jpg"
                 }
 
             },
@@ -237,10 +246,13 @@ namespace MauiPlanets.Services
                 " discovered on 1 January 1801, by Giuseppe Piazzi at Palermo Astronomical Observatory in Sicily and announced" +
                 " as a new planet. Ceres was later classified as an asteroid and then a dwarf planet, the only one always " +
                 "inside Neptune's orbit. ",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                AccentColorStart = Color.FromArgb("#497873"),
+                AccentColorEnd = Color.FromArgb("#74b5ae"),
                 Images = new()
                 {
+                    "https://i.natgeofe.com/n/b4a4f4c3-269e-4f37-a94d-45d86cf0cb52/ceres_occatorcrater_square.jpg",
+                    "https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdUZsIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ca667488ed16597e35eaab71acd42034ca4f56c2/PIA20180-16-640x350.jpg",
+                    "https://www.universetoday.com/wp-content/uploads/2016/05/Ceres_-_Oxo_and_Haulani_craters.png"
 
                 }
 
@@ -255,11 +267,12 @@ namespace MauiPlanets.Services
                 "of what are known as the classical population of Kuiper belt objects, with a diameter approximately that of " +
                 "Saturn's moon Iapetus, or 60% that of Pluto.[24][25] It has one known satellite.[26] Its extremely low average " +
                 "temperature, about 40 K (−230 °C), means its surface is covered with methane, ethane, and possibly nitrogen ices.",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                AccentColorStart = Color.FromArgb("#835a44"),
+                AccentColorEnd = Color.FromArgb("#b58b74"),
                 Images = new()
                 {
-
+                    "https://astrophotographylens.com/cdn/shop/articles/Makemake.jpg?v=1693095521",
+                    "https://upload.wikimedia.org/wikipedia/commons/2/29/Makemake_and_its_moon.jpg"
                 }
 
             },
@@ -275,11 +288,12 @@ namespace MauiPlanets.Services
                 "Spain. On September 17, 2008, it was named after Haumea, the Hawaiian goddess of childbirth, under the expectation " +
                 "by the International Astronomical Union (IAU) that it would prove to be a dwarf planet. Nominal estimates make it " +
                 "the third-largest known trans-Neptunian object, after Eris and Pluto, and approximately the size of Uranus's moon Titania. ",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                AccentColorStart = Color.FromArgb("#494746"),
+                AccentColorEnd = Color.FromArgb("#6d6d6c"),
                 Images = new()
                 {
-
+                    "https://scx2.b-cdn.net/gfx/news/hires/2017/59de5fc415107.jpg",
+                    "https://static.wikia.nocookie.net/planet-archives/images/2/2d/Haumea.png/revision/latest?cb=20131012022005"
                 }
 
             },
